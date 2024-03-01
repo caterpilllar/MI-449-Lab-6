@@ -3,6 +3,6 @@ layout: layout.liquid
 title: 11ty Boilerplate
 ---
 
-<div x-data="{name: ['1', '2']}"> 
-    <button @click="alert(name[0])"> test </button>
+<div x-data="{name: ['bob', 'sue', 'joanne', 'nate', 'beth', 'andy', 'john', 'lilly', 'james', 'carl']}"> 
+    <button @click="alert(name[Math.floor(Math.random() * 10)])"> test </button>
 </div>
