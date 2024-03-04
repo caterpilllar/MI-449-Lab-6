@@ -3,6 +3,7 @@ layout: layout.liquid
 title: random name generator
 ---
 
-<div x-data="{name: ['bob', 'sue', 'joanne', 'nate', 'beth', 'andy', 'john', 'lilly', 'james', 'carl']}"> 
-    <button @click="alert(name[Math.floor(Math.random() * 10)])"> generate random name </button>
+<div x-data="{name: ['bob', 'sue', 'joanne', 'nate', 'beth', 'andy', 'john', 'lilly', 'james', 'carl' ], randomName: ''}"> 
+    <button @click= "randomName = name[Math.floor(Math.random() * name.length)]"> generate random name</button>
+    <h1 x-text="randomName"></h1>
 </div>
